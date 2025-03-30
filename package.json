@@ -1,11 +1,13 @@
 {
   "name": "trilis-api",
   "version": "0.0.1",
+  "main":"server.js",
   "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "start": "node server.js",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -28,6 +30,9 @@
     "migration:run": "npx typeorm-ts-node-commonjs migration:run -d  ./src/database/data-source.ts",
     "migration:revert": "npx typeorm-ts-node-commonjs migration:revert -d ./src/database/data-source.ts"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.3.0",
@@ -40,7 +45,9 @@
     "mysql2": "^3.12.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "typeorm": "^0.3.20"
+    "typeorm": "^0.3.20",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
